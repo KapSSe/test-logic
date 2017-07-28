@@ -11,6 +11,7 @@ a {
   padding: 18px 62px;
   font-size: 1.1428em;
   font-weight: 700;
+  -webkit-box-shadow: 1px 5px 30px #ffd119;
   box-shadow: 1px 5px 30px #ffd119;
   text-transform: uppercase;
   background: #ffd119;
@@ -26,8 +27,15 @@ a {
   letter-spacing: 0.1428em; }
 
 .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
   .contacts__logo {
     width: 10%; }
@@ -35,10 +43,13 @@ a {
     margin-top: 30px; }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 50px;
   position: relative;
   margin-top: -30px;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   font-size: 0.8vw;
   margin-left: 12%;
@@ -49,9 +60,11 @@ a {
     font-weight: 700;
     padding: 10px; }
   .menu__link {
+    -webkit-transition: .5s;
     transition: .5s;
     color: white; }
     .menu__link:hover {
+      -webkit-transition: .3s;
       transition: .3s;
       color: black; }
   .menu-resp {
@@ -63,19 +76,29 @@ a {
   position: absolute;
   top: 10px;
   right: 31%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   height: 240px;
   width: 15%;
   background: white;
   letter-spacing: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   list-style: none;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: 2s;
   transition: 2s; }
   .drop__item, .drop__item--select {
     text-transform: capitalize;
@@ -86,6 +109,7 @@ a {
         display: block;
         position: absolute;
         left: 0;
+        -webkit-transform: translateY(-1.79vh);
         transform: translateY(-1.79vh);
         content: "";
         height: 20px;
@@ -93,6 +117,7 @@ a {
         background: white; }
       .drop__item--select:after {
         display: block;
+        -webkit-transform: translateY(1.5vh);
         transform: translateY(1.5vh);
         content: "";
         height: 2px;
@@ -107,6 +132,7 @@ a {
   .drop__active {
     opacity: 1;
     visibility: visible;
+    -webkit-transition: 1.5s;
     transition: 1.5s; }
   .drop__select {
     font-size: .95vw;
@@ -115,12 +141,22 @@ a {
     margin-bottom: 20px; }
 
 .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: calc(50vh - 213px);
   justify-content: center;
+  -webkit-transition: 1.8s;
   transition: 1.8s; }
   .heading__h1 {
     text-transform: uppercase;
@@ -129,10 +165,13 @@ a {
     font-size: 2.1428em;
     font-weight: 900;
     color: white;
+    -webkit-transition: 1.8s;
     transition: 1.8s; }
   .heading--active {
+    -webkit-transition: 1.5s;
     transition: 1.5s;
     margin-bottom: 10px;
+    -webkit-transform: translateY(120%);
     transform: translateY(120%); }
 
 .menu-resp {
@@ -145,6 +184,7 @@ a {
     height: 2px;
     background: white;
     font-size: 0;
+    -webkit-transition: 2.5s;
     transition: 2.5s; }
   .menu-resp:before {
     display: block;
@@ -154,6 +194,7 @@ a {
     width: 26px;
     height: 2px;
     background: white;
+    -webkit-transition: 1s;
     transition: 1s; }
   .menu-resp:after {
     display: block;
@@ -163,6 +204,7 @@ a {
     width: 26px;
     height: 2px;
     background: white;
+    -webkit-transition: 1s;
     transition: 1s; }
 
 @media all and (max-width: 1200px) {
@@ -172,21 +214,39 @@ a {
   .menu {
     display: none;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     text-align: right;
     font-size: 1em;
     opacity: 0;
     right: 20px;
     top: 235px;
+    -webkit-transition: 1s;
     transition: 1s; }
   .menu--active {
+    -webkit-transition: 2s;
     transition: 2s;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: right;
     opacity: 1;
@@ -196,16 +256,23 @@ a {
     display: initial; }
   .menu-resp--active .menu-resp__line {
     opacity: 0;
+    -webkit-transition: 1s;
     transition: 1s; }
   .menu-resp--active:before {
+    -webkit-transition: 1s;
     transition: 1s;
+    -webkit-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
     top: 10px; }
   .menu-resp--active:after {
+    -webkit-transition: 1s;
     transition: 1s;
+    -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
     top: 10px; }
   .contacts {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 180px; }
     .contacts__logo {
@@ -222,19 +289,29 @@ a {
   .drop {
     top: 160%;
     left: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     padding: 0;
     height: 1px;
     width: 1px;
     background: transparent;
     letter-spacing: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     list-style: none;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: 2s;
     transition: 2s; }
     .drop__item, .drop__item--select {
       text-transform: capitalize; }
@@ -250,6 +327,7 @@ a {
       .drop__link:after, .drop__link--select:after {
         display: block;
         content: "";
+        -webkit-transform: translateX(15%);
         transform: translateX(15%);
         width: 80%;
         height: 4px;
@@ -257,4 +335,5 @@ a {
     .drop__active {
       opacity: 1;
       visibility: visible;
+      -webkit-transition: 1.5s;
       transition: 1.5s; } }
