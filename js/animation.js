@@ -1,0 +1,1 @@
+ TweenMax.to('.brick', 4, {left:700}); 
